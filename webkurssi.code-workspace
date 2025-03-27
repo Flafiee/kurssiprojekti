@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "kurssiprojekti",
+			"path": "../../clone github kurssi/kurssiprojekti"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "kurssiprojekti"
+	}
+}
