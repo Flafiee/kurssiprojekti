@@ -7,11 +7,38 @@ body {
 }
 
 h1 {
-    color: #1e1d1d;
+    color: #e78383;
     text-align: center;
+    font-size: 60px;
 }
+h2 {
+    color:greenyellow ;
+    text-align: center;
+    font-size: 48px;
 
+}
+h3{
+    color:pink ;
+    text-align: center;
+    font-size: 32px;
+
+
+}
+h4{
+    color:plum ;
+    text-align: center;
+    font-size: 18;
+
+
+}
 p {
     color: #000000;
     line-height: 1.5;
+}
+
+section {
+    border: 1px solid #d9d9d9;
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin: 10px 0;
 }
