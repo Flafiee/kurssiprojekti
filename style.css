@@ -84,3 +84,29 @@ button {
 button:hover {
     background-color: #4deb62; 
 }
+        
+dialog {
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 50%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dialog-header h2 {
+    margin: 0;
+}
+.close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
