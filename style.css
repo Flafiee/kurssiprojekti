@@ -33,6 +33,17 @@ h4{
 
 
 }
+h5{ color: #89f48a;
+    text-align: center;
+
+
+}
+h6{
+    color: #a3dba4;
+    text-align: center;
+
+
+}
 p {
     color: #000000;
     line-height: 1.5;
