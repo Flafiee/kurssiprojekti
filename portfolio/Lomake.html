@@ -1,95 +1,114 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="style.css">
     <meta name="keywords" content="Keskustelu, Keskustelusivu, Viesti">
     <meta name="description" content="Sivu on Keskustelusivu, johon voi lähettää viestejä">
-<h1> KESKUSTELU</h1>
-</head>
-<article>
-    <nav>
-
-        <a href="/kurssiprojekti/index.html">Etusivu</a>
-        <a href="/kurssiprojekti/työpaikat.html">Työpaikat</a>
-        <a href="portfoliosivu.html">Portfolio</a> 
-    </nav>
-</article>
-
-<article>
-
-    <p> Tässä kohtaa voit jättää viestin, joka näkyy muille käyttäjille. <br> Voit kertoa itsestäsi tai kysyä kysymyksiä
-       
-       <br> Keskustelu on avoin kaikille, joten muista käyttäytyä asiallisesti. </p>
-    <form action="kiitos.html" method="get">
-        <label for="fname">Etunimi:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Sukunimi:</label><br>
-        <input type="text" id="lname" name="lname"><br>
-        <label for="email">Sähköposti:</label><br>
-        <input type="text" id="email" name="email"><br>
-        <label for="birthday">Syntymäpäivä:</label><br>
-        <input type="date" id="birthday" name="birthday"><br>
-        <details>
-        <summary><label for="message">Viesti:</label><br></summary>
-        <textarea id="message" name="message" rows="6" cols="40"></textarea><br>
-    </details>
-
-        <input type="submit" value="Lähetä">
-
-        <input type="checkbox" id="laatikko" name="laatikko" value="laatik">
-  <label for="laatikko"> Saammeko käyttää teitojasi? (tai jotain)</label><br>
-    </form>
-</article>
-
-<article>
-<h2>VIESTIT/KESKUSTELU</h2>
-
-</article>
-
-<article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
-    <h3 style="display:inline-block; list-style: none; border-style: none;">Lio12345@gmail.com <br>21/03/2025 7:00am</h3>
-    <p>Hei toi lähetä nappi oikeesti vie jonnekkin!</p>
-</article>  
-<article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
-    <h3 style="display:inline-block; border-style: none;">Makkarakaroke391@gmail.com<br>20/03/2025 8:31am</h3>
-        <p>Moi kaikki, miten teil menee?!</p>
-</article>
-<article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
-    <h3 style="display:inline-block; border-style: none;">perunamuusi0@gmail.com<br>20/03/2025 9:34am</h3>
-        <p>Mul menee iha ok, makkra karoke</p>
-</article>
-<article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
-    <h3 style="display:inline-block; border-style: none;">notabot@gmail.com<br>20/03/2025 2.23pm</h3>
-        <p>Siilin satumetsä on iloisesti kuvitettu lasten runokirja, jossa siili jakaa ajatuksiaan elämän kulusta. Riikka Kostiander virittää runoihin metsäisen tunnelman: <br>„Ilmassa on syksyn tuntu, ruohikolla kastehuntu, varvuissa punaiset puolukat;<br> vieressä mehevät juolukat. Ja ihan vaan siksi, maalataan mustikatkin sinisiksi“. <br>Vappu Ormion värikylläisissä kuvissa on raikkautta ja elämäniloa. Ikäsuositus: 444+</p>
-</article>
-<article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
-    <h3 style="display:inline-block; border-style: none;">JamiKoiraonparas@gmail.com <br> 20/03/2025 5.28pm</h3>
-        <p>Mikä ihme on toi notabot, mitä se oikeen selitää?? oonko mä vaarassa?</p>
-</article>
-<article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
-    <h3 style="display:inline-block; border-style: none;">Moimoi@edu.koppa.fi <br> 20/03/2025 6.54pm</h3>
-        <p>En kyl tiiä, joku spam botti tyylii..</p>
-</article>
+    <title>Keskustelusivu</title>
+    <style>
         
+        dialog {
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            width: 50%;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        dialog::backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .dialog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .dialog-header h2 {
+            margin: 0;
+        }
+        .close-btn {
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>KESKUSTELU</h1>
 
+    <button id="open-dialog-btn">Kommentoi</button>
 
+    
+    <dialog id="comment-dialog">
+        <div class="dialog-header">
+            <h2>Uusi viesti</h2>
+            <button class="close-btn" id="close-dialog-btn">&times;</button>
+        </div>
+        <form action="kiitos.html" method="get">
+            <label for="fname">Etunimi:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Sukunimi:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Sähköposti:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="birthday">Syntymäpäivä:</label><br>
+            <input type="date" id="birthday" name="birthday"><br>
+            <label for="message">Viesti:</label><br>
+            <textarea id="message" name="message" rows="6" cols="40"></textarea><br>
+            <input type="submit" value="Lähetä">
+        </form>
+    </dialog>
 
+    <script>
+        const openDialogBtn = document.getElementById('open-dialog-btn');
+        const closeDialogBtn = document.getElementById('close-dialog-btn');
+        const commentDialog = document.getElementById('comment-dialog');
 
+       
+        openDialogBtn.addEventListener('click', () => {
+            commentDialog.showModal();
+        });
 
+       
+        closeDialogBtn.addEventListener('click', () => {
+            commentDialog.close();
+        });
+    </script>
 
+    <article>
+        <h2>VIESTIT/KESKUSTELU</h2>
+    </article>
+    <article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
+        <h3 style="display:inline-block; list-style: none; border-style: none;">Lio12345@gmail.com <br>21/03/2025 7:00am</h3>
+        <p>Hei toi lähetä nappi oikeesti vie jonnekkin!</p>
+    </article>
+    <article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
+        <h3 style="display:inline-block; border-style: none;">Makkarakaroke391@gmail.com<br>20/03/2025 8:31am</h3>
+        <p>Moi kaikki, miten teil menee?!</p>
+    </article>
+    <article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
+        <h3 style="display:inline-block; border-style: none;">perunamuusi0@gmail.com<br>20/03/2025 9:34am</h3>
+        <p>Mul menee iha ok, makkra karoke</p>
+    </article>
+    <article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
+        <h3 style="display:inline-block; border-style: none;">notabot@gmail.com<br>20/03/2025 2.23pm</h3>
+        <p>Siilin satumetsä on iloisesti kuvitettu lasten runokirja, jossa siili jakaa ajatuksiaan elämän kulusta. Riikka Kostiander virittää runoihin metsäisen tunnelman: <br>„Ilmassa on syksyn tuntu, ruohikolla kastehuntu, varvuissa punaiset puolukat;<br> vieressä mehevät juolukat. Ja ihan vaan siksi, maalataan mustikatkin sinisiksi“. <br>Vappu Ormion värikylläisissä kuvissa on raikkautta ja elämäniloa. Ikäsuositus: 444+</p>
+    </article>
+    <article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
+        <h3 style="display:inline-block; border-style: none;">JamiKoiraonparas@gmail.com <br> 20/03/2025 5.28pm</h3>
+        <p>Mikä ihme on toi notabot, mitä se oikeen selitää?? oonko mä vaarassa?</p>
+    </article>
+    <article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
+        <h3 style="display:inline-block; border-style: none;">Moimoi@edu.koppa.fi <br> 20/03/2025 6.54pm</h3>
+        <p>En kyl tiiä, joku spam botti tyylii..</p>
+    </article>
 
-
-
-
-<article>
+    
     <nav>
-
         <a href="index.html">Etusivu</a>
         <a href="työpaikat.html">Työpaikat</a>
-
+        <a href="mediasivu.html">Media</a>
     </nav>
-</article>
-
-
-
+</body>
 </html>
