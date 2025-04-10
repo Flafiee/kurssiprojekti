@@ -55,3 +55,32 @@ section {
     padding: 10px;
     margin: 10px 0;
 }
+
+a {
+    color: #95f561; 
+    text-decoration: none; 
+}
+
+
+a:hover {
+    color: #4deb62; 
+}
+
+
+a:visited {
+    color: #7a7a7a; /
+}
+
+button {
+    background-color: #95f561; 
+    color: #ffffff; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #4deb62; 
+}
