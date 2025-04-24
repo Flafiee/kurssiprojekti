@@ -12,22 +12,26 @@
     gap: 4px;
     background-color:  rgba(233, 190, 245, 0.8);
     padding: 5px;
+    
 }
 
 .container > div {
     background-color: rgba(246, 222, 241, 0.8);
     padding: 10px;
+    border: 5px;
 }
 
 .container > div.header {
     grid-area: header;
     text-align: center;
+    border: 5px;
     
 }
 
 .container > div.nav-container {
     grid-area: nav;
     text-align: center;
+    border: 5px;
     
 
 }
@@ -35,6 +39,7 @@
 .container > div.content {
     grid-area: content;
     text-align: center;
+    border: 5px;
     
 }
 
@@ -42,4 +47,5 @@
     grid-area: footer;
     text-align: center;
     background-color:#f7e3f5;
+    border: 5px;
 }
