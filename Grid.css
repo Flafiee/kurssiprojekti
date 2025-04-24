@@ -28,6 +28,7 @@
 .container > div.nav-container {
     grid-area: nav;
     text-align: center;
+    
 
 }
 
