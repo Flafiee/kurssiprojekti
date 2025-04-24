@@ -1,3 +1,5 @@
+
+
 .container {
     display: grid;
     grid-template-rows: auto auto 1fr auto;
@@ -8,7 +10,7 @@
       "footer footer";
     grid-template-columns: 1fr 1fr; 
     gap: 4px;
-    background-color: #d3a2ec;
+    background-color: #eebce9;
     padding: 5px;
 }
 
@@ -20,18 +22,23 @@
 .container > div.header {
     grid-area: header;
     text-align: center;
+    
 }
 
 .container > div.nav-container {
     grid-area: nav;
     text-align: center;
+
 }
 
 .container > div.content {
     grid-area: content;
+    text-align: center;
+    
 }
 
 .container > div.footer {
     grid-area: footer;
     text-align: center;
+    background-color:#fce7fa;
 }

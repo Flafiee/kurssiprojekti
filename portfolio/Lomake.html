@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../Grid.css" >
     <link ref="stylesheet" href="flex.css" >
     <link rel="stylesheet" href="../style.css">
     <meta name="keywords" content="Keskustelu, Keskustelusivu, Viesti">
@@ -10,8 +11,16 @@
     <title>Keskustelusivu</title>
 
 </head>
+<div class="container">
+    <div class="header">
+        <h4>REMI VALKONEN 24N</h4>
+        <p>Opiskelija Tieto ja- viestintätekniikalla</p>
+    
 <body>
-    <h1>KESKUSTELU</h1>
+    <div class="header">
+        <h3>Keskustelusivu</h3>
+    </div>
+  
 
     <button id="open-dialog-btn">Kommentoi</button>
 
@@ -51,9 +60,9 @@
             commentDialog.close();
         });
     </script>
-
+<div class="container">
     <article>
-        <h2>VIESTIT/KESKUSTELU</h2>
+        <h3>VIESTIT/KESKUSTELU</h3>
     </article>
     <article style="display: inline-block; border-style: groove; padding: 5px; margin: 5px 0;">
         <h4 style="display:inline-block; list-style: none; border-style: none;">Lio12345@gmail.com <br>21/03/2025 7:00am</h4>
@@ -79,14 +88,17 @@
         <h4 style="display:inline-block; border-style: none;">Moimoi@edu.koppa.fi <br> 20/03/2025 6.54pm</h4>
         <p>En kyl tiiä, joku spam botti tyylii..</p>
     </article>
-
-    
-    <nav>
-       
-        <a href="../index.html">Etusivu</a>
-       
-       
-        <a href="portfoliosivu.html">Portfolio</a>
-    </nav>
+</div>
+    <div class="nav-container">
+        <nav>
+            <a href="../index.html">Etusivu</a>
+            <a href="portfoliosivu.html">Portfolio</a>
+        </nav>
+    </div>
+    <div class="footer"><h3>Linkit</h3>
+        <a href="https://turku.inschool.fi">Wilma</a> <a href="https://tai.fi">Tai.fi</a> <a href="https://taito.edu.turku.fi/my/">My-Moodle</a>
+    </div>
+        
+</div>
 </body>
 </html>
