@@ -1,25 +1,39 @@
 
 
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         background-color: #f0f0f0;
         margin: 0 64px; 
         padding: 0;
     }
 
+@font-face {
+    font-family: 'CustomFont';
+    src: url( "googlefonts.github.io/ebgaramond-specimen/EBGaramond-Regular.ttf") format('truetype');
+    font-weight: normal; }
+    
+
+
+    
+    
+
 
 h1 {
+    font-family: CustomFont;
+    color: #ff6f61;
     color: #e78383;
     text-align: center;
     font-size: 60px;
 }
 h2 {
+    font-family: CustomFont;
     color:greenyellow ;
     text-align: center;
     font-size: 48px;
 
 }
-h3{
+h3{ 
+    font-family: CustomFont;
     color:rgb(240, 156, 239) ;
     text-align: center;
     font-size: 32px;
@@ -27,24 +41,29 @@ h3{
 
 }
 h4{
+    font-family: CustomFont;
     color:plum ;
     text-align: center;
     font-size: 18;
 
 
 }
-h5{ color: #89f48a;
+h5{ 
+    font-family: CustomFont;
+    color: #89f48a;
     text-align: center;
 
 
 }
 h6{
+    font-family: CustomFont;
     color: #a3dba4;
     text-align: center;
 
 
 }
 p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #000000;
     line-height: 1.5;
 }
