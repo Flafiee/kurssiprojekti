@@ -1,47 +1,48 @@
 
 
     body {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
         background-color: #f0f0f0;
         margin: 0 64px; 
         padding: 0;
+        font-weight: normal;
     }
 
 @font-face {
     font-family: 'CustomFont';
-    src: url( "googlefonts.github.io/ebgaramond-specimen/EBGaramond-Regular.ttf") format('truetype');
-    font-weight: normal; }
-    
+    src: url("googlefonts.github.io/ebgaramond-specimen/EBGaramond-Regular.ttf");
+    font-weight: bold; }
 
 
-    
-    
+   
 
 
 h1 {
-    font-family: CustomFont;
+    font-family: "CustomFont",ebgaramond, serif;
     color: #ff6f61;
     color: #e78383;
     text-align: center;
     font-size: 60px;
+    font-weight: bold;
 }
 h2 {
-    font-family: CustomFont;
+    font-family: "CustomFont",ebgaramond, serif;
     color:greenyellow ;
     text-align: center;
     font-size: 48px;
 
 }
 h3{ 
-    font-family: CustomFont;
+    font-family: "CustomFont",ebgaramond, serif;
     color:rgb(240, 156, 239) ;
     text-align: center;
     font-size: 32px;
+    font-weight: bold;
 
 
 }
 h4{
-    font-family: CustomFont;
+    font-family: "CustomFont",ebgaramond, serif;
     color:plum ;
     text-align: center;
     font-size: 18;
@@ -49,14 +50,14 @@ h4{
 
 }
 h5{ 
-    font-family: CustomFont;
+    font-family: "CustomFont",ebgaramond, serif;
     color: #89f48a;
     text-align: center;
 
 
 }
 h6{
-    font-family: CustomFont;
+    font-family: "CustomFont",ebgaramond, serif;
     color: #a3dba4;
     text-align: center;
 
