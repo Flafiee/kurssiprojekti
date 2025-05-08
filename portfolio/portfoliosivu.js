@@ -1,0 +1,1 @@
+console.log("portfoliosivu avattu");
