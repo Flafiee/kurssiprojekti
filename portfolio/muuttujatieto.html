@@ -16,11 +16,24 @@
 
     <section>
         <h4>Muuttujat</h4>
-        <button onclick="summa()">Summa</button>
-        <button onclick="vahennys()">Vähennys</button>
-        <button onclick="kerto()">Kerto</button>
-        <button onclick="jako()">Jako</button>
-    
+        <button id="SummaButton" onclick="summa()">Summa</button>
+        <button id="VähennysButton" onclick="vähennys()">Vähennys</button>
+        <button id="KertoButton" onclick="kerto()">Kerto</button>
+        <button id="JakoButton" onclick="jako()">Jako</button>
+    </section>
+
+    <section>
+        <h4>Laskin</h4>
+        <label for="numero1">Ensimmäinen numero:</label>
+        <input type="number" id="numero1" placeholder="Syötä ensimmäinen numero">
+        <br>
+        <label for="numero2">Toinen numero:</label>
+        <input type="number" id="numero2" placeholder="Syötä toinen numero">
+        <br><br>
+        <button onclick="laskeSumma()">+</button>
+        <button onclick="laskeErotus()">-</button>
+        <button onclick="laskeKerto()">×</button>
+        <button onclick="laskeJako()">÷</button>
     </section>
 
 
