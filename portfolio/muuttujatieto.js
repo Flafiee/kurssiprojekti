@@ -1,41 +1,68 @@
 console.log("Muuttujatieto avattu");
-a=3
-b=5
-c=7
-d=15
-function summa(a, b) {
-    return a + b;
+function summa(eka, toka) {
+    return eka + toka;
 }
-function vähennys(b, c) {
-    return b - c;
+function vähennys(eka, toka) {
+    return eka - toka;
 }
-function kerto(c, d) {
-    return c * d;
+function kerto(eka, toka) {
+    return eka * toka;
 }
-function jako(d, a) {
-    return d / a;
+function jako(eka, toka) {
+    return eka / toka;
 }
 document.getElementById('SummaButton').addEventListener('click', function() {
-    const result = summa(a, b);
+    const eka = 3;
+    const toka = 5; 
+    const result = summa(eka, toka);
     alert("Summa: " + result);
 });
 document.getElementById('VähennysButton').addEventListener('click', function() {
-    const result = vähennys(b, c);
+    const eka = 5; 
+    const toka = 7; 
+    const result = vähennys(eka, toka);
+
     alert("Vähennys: " + result);
 });
 document.getElementById('KertoButton').addEventListener('click', function() {
-    const result = kerto(c, d);
+    const eka = 7; 
+    const toka = 15; 
+    const result = kerto(eka, toka);
     alert("Kerto: " + result);
 });
 document.getElementById('JakoButton').addEventListener('click', function() {
-    const result = jako(d, a);
+    const eka = 15; 
+    const toka = 3; 
+    const result = jako(eka, toka);
     alert("Jako: " + result);
 });
 
-function
+function laskin_summa() {
+    const eka = parseFloat(document.getElementById("numero1").value);
+    const toka = parseFloat(document.getElementById("numero2").value);
+    const result = summa(eka, toka);
+    alert("Summa: " + result);
+}
 
-function
+function laskin_vahennys() {
+    const eka = parseFloat(document.getElementById("numero1").value);
+    const toka = parseFloat(document.getElementById("numero2").value);
+    const result = vähennys(eka, toka);
+    alert("Vähennys: " + result);
+}
 
-function
+function laskin_kerto() {
+    const eka = parseFloat(document.getElementById("numero1").value);
+    const toka = parseFloat(document.getElementById("numero2").value);
+    const result = kerto(eka, toka);
+    alert("Tulo: " + result);
+}
 
-function
+function laskin_jako() {
+    const eka = parseFloat(document.getElementById("numero1").value);
+    const toka = parseFloat(document.getElementById("numero2").value);
+    if (toka !== 0) {
+        const result = jako(eka, toka);
+        alert("Osamäärä: " + result);
+    }
+}
