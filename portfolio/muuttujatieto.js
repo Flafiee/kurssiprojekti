@@ -31,3 +31,11 @@ document.getElementById('JakoButton').addEventListener('click', function() {
     const result = jako(d, a);
     alert("Jako: " + result);
 });
+
+function
+
+function
+
+function
+
+function
