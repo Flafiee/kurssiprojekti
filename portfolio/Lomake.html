@@ -36,36 +36,22 @@
             <h2>Uusi viesti</h2>
             <button class="close-btn" id="close-dialog-btn">&times;</button>
         </div>
-        <form action="kiitos.html" method="get">
-            <label for="fname">Etunimi:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">Sukunimi:</label><br>
-            <input type="text" id="lname" name="lname"><br>
-            <label for="email">Sähköposti:</label><br>
-            <input type="text" id="email" name="email"><br>
-            <label for="birthday">Syntymäpäivä:</label><br>
-            <input type="date" id="birthday" name="birthday"><br>
-            <label for="message">Viesti:</label><br>
-            <textarea id="message" name="message" rows="6" cols="40"></textarea><br>
-            <input type="submit" value="Lähetä">
-        </form>
+       <form id="comment-form" action="" method="get">
+    <label for="fname">Etunimi:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Sukunimi:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <label for="email">Sähköposti:</label><br>
+    <input type="text" id="email" name="email"><br>
+    <label for="birthday">Syntymäpäivä:</label><br>
+    <input type="date" id="birthday" name="birthday"><br>
+    <label for="message">Viesti:</label><br>
+    <textarea id="message" name="message" rows="6" cols="40"></textarea><br>
+    <button type="button" id="submit-btn">Lähetä</button>
+</form>
     </dialog>
     <script src="Lomake.js" defer></script>
-    <script>
-        const openDialogBtn = document.getElementById('open-dialog-btn');
-        const closeDialogBtn = document.getElementById('close-dialog-btn');
-        const commentDialog = document.getElementById('comment-dialog');
-
-       
-        openDialogBtn.addEventListener('click', () => {
-            commentDialog.showModal();
-        });
-
-       
-        closeDialogBtn.addEventListener('click', () => {
-            commentDialog.close();
-        });
-    </script>  
+ 
 <div class="container">
     
 
