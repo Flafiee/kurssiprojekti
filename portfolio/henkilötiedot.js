@@ -1,4 +1,4 @@
-henkilöt = [
+const henkilöt = [
     {
         name: "Merja Meikäläinen",
         age: 20,
@@ -11,7 +11,7 @@ henkilöt = [
         job: "Sähköteknikko",
         driversLicense: true
     },
-    {  name: "Helena Heikäläinen ",
+    {  name: "Helena Heikäläinen",
         age: 30,
         job: "Ohjelmistosuunnittelija",
         driversLicense: false
@@ -28,29 +28,32 @@ henkilöt = [
         job: "Linja-autonkuljettaja",
         driversLicense: true
     }
-]
+];
 
 const rivit = document.getElementById("rivit");
 
 function luoRivit() {
-    henkilöt.forEach(henkilo=> {
+    henkilöt.forEach(henkilo => {
         const rivi = document.createElement("tr");
-
-         const nimi = document.createElement("td");
+        const nimi = document.createElement("td");
         nimi.textContent = henkilo.name;
-         const ikä = document.createElement("td");
+        const ika = document.createElement("td");
         ika.textContent = henkilo.age;
-         const työ = document.createElement("td");
-        tyo.textContent = henkilo.job;
-         const ajokortti = document.createElement("td");
-        ajokortti.textContent = henkilo.driversLicense ? "Kyllä" : "Ei";
-        
-        rivi.appendChild(nimi);
-        rivi.appendChild(ikä);
-        rivi.appendChild(työ);
-        rivi.appendChild(ajokortti);
-    
 
+        const tyo = document.createElement("td");
+        tyo.textContent = henkilo.job;
+        const ajokortti = document.createElement("td");
+        ajokortti.textContent = henkilo.driversLicense ? "Kyllä" : "Ei";
+
+    
+        rivi.appendChild(nimi);
+        rivi.appendChild(ika);
+        rivi.appendChild(tyo);
+        rivi.appendChild(ajokortti);
+
+    
+        rivit.appendChild(rivi);
     });
 }
-document.addEventListener("Rivit", luoRivit);
+// DOMContentLoaded, jotta tiedosto voidaan ladata, oli vaikeuksia kun en tiennyt, että miksi se ei näkynyt
+document.addEventListener("DOMContentLoaded", luoRivit);
