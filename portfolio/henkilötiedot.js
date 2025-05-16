@@ -20,7 +20,7 @@ const henkilöt = [
     {
         name: "Semir Sikäläinen",
         age: 18,
-        job: "Opiskelija",
+        job:"Opiskelija",
         driversLicense: true
     },
     {  name: "Tomas Täkäläinen",
@@ -31,17 +31,23 @@ const henkilöt = [
 ];
 
 const rivit = document.getElementById("rivit");
-
 function luoRivit() {
+    rivit.innerHTML = "";
     henkilöt.forEach(henkilo => {
         const rivi = document.createElement("tr");
         const nimi = document.createElement("td");
         nimi.textContent = henkilo.name;
         const ika = document.createElement("td");
         ika.textContent = henkilo.age;
+          if (henkilo.age >= 18) {
+            ika.innerHTML += " 🍺";
+        }
+
 
         const tyo = document.createElement("td");
         tyo.textContent = henkilo.job;
+        if (henkilo.job.toLowerCase() === "opiskelija") {
+            tyo.innerHTML += " 🎓"; }
         const ajokortti = document.createElement("td");
         ajokortti.textContent = henkilo.driversLicense ? "Kyllä" : "Ei";
 
@@ -51,9 +57,35 @@ function luoRivit() {
         rivi.appendChild(tyo);
         rivi.appendChild(ajokortti);
 
-    
         rivit.appendChild(rivi);
     });
 }
-// DOMContentLoaded, jotta tiedosto voidaan ladata, oli vaikeuksia kun en tiennyt, että miksi se ei näkynyt
 document.addEventListener("DOMContentLoaded", luoRivit);
+document.getElementById("henkilotiedotLomake").addEventListener("submit", function(a){
+    a.preventDefault();
+    const nimi = document.getElementById("nimi").value;
+    const ika = parseInt(document.getElementById("ika").value, 10);
+    const tyo = document.getElementById("tyo").value;
+    const ajokortti = document.getElementById("ajokortti").value === "Kyllä";
+
+    if(ika < 0) {
+        alert("Iän pitää olla positiivinen luku");
+        return;
+    }
+
+    const uusiH = {
+        name: nimi,
+        age: ika,
+        job:tyo,
+        driversLicense: ajokortti,
+
+    };
+    henkilöt.push(uusiH);
+    luoRivit();
+    a.target.reset();
+
+});
+
+
+
+
