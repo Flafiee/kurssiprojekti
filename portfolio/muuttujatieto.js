@@ -66,3 +66,34 @@ function laskin_jako() {
         alert("Osamäärä: " + result);
     }
 }
+
+function päivämääräobjekti() {
+    const nyt = new Date();
+
+
+    const paiva = nyt.getDate();
+    const kuukausi = nyt.getMonth() + 1;
+    const vuosi = nyt.getFullYear();
+    const paivamaara = `${paiva}.${kuukausi}.${vuosi}`;
+
+    const tunnit = nyt.getHours().toString().padStart(2, '0');
+    const minuutit = nyt.getMinutes().toString().padStart(2, '0');
+    const sekunnit = nyt.getSeconds().toString().padStart(2, '0');
+    const aika = `${tunnit}.${minuutit}.${sekunnit}`;
+
+
+    const paivamaaraAika = `${paivamaara} klo  ${aika}`;
+    const viikonpaivat = [ "maanantai", "tiistai",  "keskiviikko", "torstai", "perjantai", "lauantai", "sunnuntai"];
+    const viikonpaiva = viikonpaivat[nyt.getDay()];
+
+    const kuukaudet = ["tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kesäkuu", "heinäkuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "joulukuu"];
+    const kuukausiNimi = kuukaudet[nyt.getMonth()];
+    document.getElementById('paivamaara').textContent = paivamaara;
+    document.getElementById('aika').textContent = aika;
+    document.getElementById('paivaJaAika').textContent = paivamaaraAika;
+    document.getElementById('viikonpaiva').textContent = viikonpaiva;
+    document.getElementById('kuukausi').textContent = kuukausiNimi;
+}
+document.getElementById('PaivamaaraButton').onclick = päivämääräobjekti;
+
+
