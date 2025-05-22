@@ -72,7 +72,7 @@ function päivämääräobjekti() {
 
 
     const paiva = nyt.getDate();
-    const kuukausi = nyt.getMonth() + 1;
+    const kuukausi = nyt.getMonth();
     const vuosi = nyt.getFullYear();
     const paivamaara = `${paiva}.${kuukausi}.${vuosi}`;
 
